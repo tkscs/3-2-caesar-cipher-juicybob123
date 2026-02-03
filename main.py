@@ -12,23 +12,34 @@ print(f"position of 'a' in the alphabet: {index}")
 # The computer already thinks of all the characters it can print out as numbers.
 # If you want to, you can look up what number a character corresponds to in
 # "ASCII" encoding:
-ascii_number = ord("a")
-print(f"ascii number representation of 'a': {ascii_number}")
+# ascii_number = ord("a")
+# print(f"ascii number representation of 'a': {ascii_number}")
 
-ascii_letter = chr(97)
-print(f"ascii letter at position #97: {ascii_letter}")
+
+
 
 # ----- Your Algorithm -----
 
 # Your task is to encrypt this secret message into ciphertext
-plaintext = "This is a secret message."
+plaintext = ""
+encrypted_text = ""
 
 # Initialize your ciphertext an empty string
+x = 1
 ciphertext = ""
 for character in plaintext:
-    # do something to the character to encrypt it
-    # YOUR CODE HERE
-    encrypted_character = "a" # CHANGE THIS!
-    ciphertext += encrypted_character
+    ascii_number = ord(character)
+    ascii_number = ascii_number + 24
+    ascii_letter = chr(ascii_number)
+    dadad = f"{ascii_letter}"
 
-print(f"{ciphertext = }")
+    encrypted_text = encrypted_text + dadad
+    
+  
+    x = x + 1
+    # do something to the character toencrypt it
+    # YOUR CODE HERE
+ # CHANGE THIS!
+    # ciphertext += encrypted_character
+
+print(f"{encrypted_text = }")
